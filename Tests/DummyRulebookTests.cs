@@ -16,7 +16,7 @@ namespace Tests
         {
             var character = new Wizard
             {
-                Level = Int32.MaxValue
+                Experience = Int32.MaxValue
             };
             var item = new Staff();
 
@@ -31,7 +31,7 @@ namespace Tests
         {
             var character = new Wizard
             {
-                Level = 10
+                Experience = 1000
             };
             var item1 = new Staff
             {
