@@ -75,5 +75,22 @@ namespace Tests
 
             Assert.That(result, Is.False);
         }
+
+        [Test]
+        public void RefuseAttackIllegalObject()
+        {
+            var character = new Wizard();
+            var item = new IronDagger();
+            var result = _god.Says(character).Can.Attack(item);
+
+        }
+
+        public void AcceptAttackLegalObject()
+        {
+            var character = new Wizard();
+            var character2 = new Wizard();
+            var item = new IronDagger();
+            var result = _god.Says(character).Can.Attack(character2);
+        }
     }
 }
