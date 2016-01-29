@@ -5,6 +5,9 @@
         Iron,
         Clay,
         Wood,
-        Stone
+        Stone,
+        Plastic,
+        Wool,
+        Glass
     }
 }
