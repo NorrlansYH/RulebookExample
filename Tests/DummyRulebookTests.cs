@@ -66,6 +66,34 @@ namespace Tests
         }
 
         [Test]
+        public void RefuseAttackIllegalObject()
+        {
+            var character = new Wizard();
+            var item = new IronDagger();
+            var result = _god.Says(character).Can.Attack(item);
+
+        }
+
+        public void AcceptAttackLegalObject()
+        {
+            var character = new Wizard();
+            var character2 = new Wizard();
+            var item = new IronDagger();
+            var result = _god.Says(character).Can.Attack(character2);
+        }
+
+        [Test]
+        public void LikeWeaponType()
+        {
+            var caracter = new Warrior();
+            var item = new Sword();
+            var result = _god.Says(caracter).Can.LikeWeapon(item);
+
+            Assert.That(result, Is.True, "Is realy Happy becose he got his favorite weapon");
+            //     Assert.That(result, Is.False,"Dont get any bonuses bechose of weapon is not his favirote");
+
+        }
+        [Test]
         public void CanBeWieldedInOneHand()
         {
             var Char = new Wizard();

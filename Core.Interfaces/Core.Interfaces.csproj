@@ -44,6 +44,7 @@
     <Compile Include="Classifications\Itemtype.cs" />
     <Compile Include="Classifications\MaterialTypes.cs" />
     <Compile Include="ICharacter.cs" />
+    <Compile Include="ILikebul.cs" />
     <Compile Include="IWeapon.cs" />
     <Compile Include="IWieldable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -48,6 +48,24 @@ namespace Rulebook
                    && _character.Level >= wieldable.MinLevel;
         }
 
+        public object Attack(object obj)
+        {
+            var target = obj as ICharacter;
+            if (target == null)
+                return false;
+
+            return true;
+        }
+
+        public bool LikeWeapon(object item)
+        {
+            var likebul = item as ILikebul;
+            if (likebul != null)
+                return false;
+
+            return true;
+
+        }
         public Boolean Onehand(Object item)
         {
             var inonehand = item as IWieldable;
