@@ -35,6 +35,8 @@ namespace Tests
 
             var result =
                 _god.Says(character).Can.Equip(item);
+
+            Assert.That(result, Is.True);
         }
 
         [Test]

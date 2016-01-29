@@ -14,6 +14,7 @@ namespace Rulebook
             new Dictionary<Class, IList<ItemMaterial>>();
 
         private readonly IDictionary<Class, IList<ItemType>> _wieldableTypes = new Dictionary<Class, IList<ItemType>>();
+        private readonly IDictionary<Class, IList<Armortype>> _armorTypes = new Dictionary<Class, IList<Armortype>>();
 
         public BasicCharacterActionChecks(ICharacter character)
         {
@@ -28,6 +29,11 @@ namespace Rulebook
                 ItemMaterial.Stone,
                 ItemMaterial.Wood
             });
+            _armorTypes.Add(Class.Wizard, new List<Armortype>
+            {
+                Armortype.Cloth
+            });
+
         }
 
         public Boolean Wield(Object item)
@@ -47,6 +53,16 @@ namespace Rulebook
                 return false;
 
             return true;
+        }
+
+        public bool Equip(object item)
+        {
+            var equipable = item as IEquipable;
+            if (equipable == null)
+                return false;
+
+            return _armorTypes[_character.Class].Contains(equipable.Armortype)
+                   && _character.Level >= equipable.MinLevel;
         }
     }
 }

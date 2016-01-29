@@ -7,7 +7,7 @@ namespace Core.Armor
     public class ClothArmor : IArmor
     {
         public Armortype Armortype { get; } = Armortype.Cloth;
-        public Int32 MinLevel { get; set; } = 1;
+        public Int32 MinLevel { get; set; } = 0;
         
     }
 }
