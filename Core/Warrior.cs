@@ -1,4 +1,5 @@
-﻿using Core.Interfaces;
+﻿using System;
+using Core.Interfaces;
 using Core.Interfaces.Classifications;
 
 namespace Core
@@ -7,5 +8,6 @@ namespace Core
     {
         public Class Class { get; } = Class.Warrior;
         public int Level { get; }
+        public Enum FaviroteWeapon { get; } = ItemType.Sword;
     }
 }
