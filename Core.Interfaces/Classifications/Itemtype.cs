@@ -6,7 +6,9 @@
         Dagger,
         Sword,
         Mace,
-        Spear
+        Spear,
+        GreatSword
+
         
     }
 
