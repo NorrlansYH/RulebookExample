@@ -14,6 +14,7 @@ namespace Rulebook
             new Dictionary<Class, IList<ItemMaterial>>();
 
         private readonly IDictionary<Class, IList<ItemType>> _wieldableTypes = new Dictionary<Class, IList<ItemType>>();
+        
 
         public BasicCharacterActionChecks(ICharacter character)
         {
@@ -28,6 +29,7 @@ namespace Rulebook
                 ItemMaterial.Stone,
                 ItemMaterial.Wood
             });
+            
         }
 
         public Boolean Wield(Object item)
@@ -42,11 +44,12 @@ namespace Rulebook
 
         public object Attack(object obj)
         {
+            var type = obj.GetType();
             var target = obj as ICharacter;
             if (target == null)
                 return false;
+            return _character.WieldedWeapon != null;
 
-            return true;
         }
     }
 }

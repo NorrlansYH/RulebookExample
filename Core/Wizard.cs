@@ -8,5 +8,6 @@ namespace Core
     {
         public Class Class { get; } = Class.Wizard;
         public Int32 Level { get; set; }
+        public IWeapon WieldedWeapon { get; set; }
     }
 }
