@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DummyRulebookTests.cs" />
+    <Compile Include="Levellingtesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testlevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

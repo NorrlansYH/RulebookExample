@@ -89,9 +89,9 @@ namespace Tests
             var item = new Sword();
             var result = _god.Says(caracter).Can.LikeWeapon(item);
 
-        Assert.That(result, Is.True,"Is realy Happy becose he got his favorite weapon" );
-   //     Assert.That(result, Is.False,"Dont get any bonuses bechose of weapon is not his favirote");
-        
+            Assert.That(result, Is.True, "Is realy Happy becose he got his favorite weapon");
+            //     Assert.That(result, Is.False,"Dont get any bonuses bechose of weapon is not his favirote");
+
         }
     }
 }
