@@ -64,5 +64,20 @@ namespace Tests
 
             Assert.That(result, Is.False);
         }
+
+        [Test]
+        public void CanBeWieldedInOneHand()
+        {
+            var Char = new Wizard();
+            var staff = new Staff();
+            var dagger = new IronDagger();
+            var resultat = _god.Says(Char).Can.Onehand(staff);
+
+            Assert.That(resultat, Is.False);
+
+            var resultat2 = _god.Says(Char).Can.Onehand(dagger);
+
+            Assert.That(resultat2, Is.True);
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace Rulebook
     public class BasicCharacterActionChecks : ICharacterActions
     {
         private readonly ICharacter _character;
+        private readonly IWieldable _item;
 
         private readonly IDictionary<Class, IList<ItemMaterial>> _wieldableMaterials =
             new Dictionary<Class, IList<ItemMaterial>>();
@@ -30,6 +31,13 @@ namespace Rulebook
             });
         }
 
+        public BasicCharacterActionChecks(IWieldable item)
+        {
+            _item = item;
+
+
+        }
+
         public Boolean Wield(Object item)
         {
             var wieldable = item as IWieldable;
@@ -38,6 +46,15 @@ namespace Rulebook
 
             return _wieldableTypes[_character.Class].Contains(wieldable.ItemType)
                    && _character.Level >= wieldable.MinLevel;
+        }
+
+        public Boolean Onehand(Object item)
+        {
+            var inonehand = item as IWieldable;
+            if (inonehand == null)
+                return false;
+
+            return inonehand.OneHand;
         }
     }
 }

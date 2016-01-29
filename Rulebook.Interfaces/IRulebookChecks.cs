@@ -3,5 +3,6 @@
     public interface IRulebookChecks
     {
         ICharacterActions Can { get; }
+        ICharacterActions OneHand { get; }
     }
 }

@@ -8,5 +8,6 @@ namespace Core.Weapons
     {
         public ItemType ItemType { get; } = ItemType.Staff;
         public Int32 MinLevel { get; set; } = 1;
+        public Boolean OneHand => false;
     }
 }

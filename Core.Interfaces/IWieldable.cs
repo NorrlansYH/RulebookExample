@@ -7,5 +7,6 @@ namespace Core.Interfaces
     {
         Int32 MinLevel { get; }
         ItemType ItemType { get; }
+        Boolean OneHand { get; }
     }
 }
