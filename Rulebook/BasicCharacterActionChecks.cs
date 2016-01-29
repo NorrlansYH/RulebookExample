@@ -48,11 +48,11 @@ namespace Rulebook
 
         public object Attack(object obj)
         {
+            var type = obj.GetType();
             var target = obj as ICharacter;
             if (target == null)
                 return false;
-
-            return true;
+            return _character.WieldedWeapon != null;
         }
 
         public bool Equip(object item)
@@ -64,5 +64,8 @@ namespace Rulebook
             return _armorTypes[_character.Class].Contains(equipable.Armortype)
                    && _character.Level >= equipable.MinLevel;
         }
+
+
+
     }
 }

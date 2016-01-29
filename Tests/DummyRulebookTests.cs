@@ -17,7 +17,7 @@ namespace Tests
         {
             var character = new Wizard
             {
-                Level = Int32.MaxValue
+                Experience = Int32.MaxValue
             };
             var item = new Staff();
 
@@ -44,7 +44,7 @@ namespace Tests
         {
             var character = new Wizard
             {
-                Level = 10
+                Experience = 1000
             };
             var item1 = new Staff
             {
@@ -69,7 +69,7 @@ namespace Tests
         [Test]
         public void RefusesWieldingIllegalItem()
         {
-            var character = new Wizard();
+            var character = new Wizard() {WieldedWeapon = new IronDagger()};
             var item = new IronDagger();
 
             var result =
@@ -81,18 +81,21 @@ namespace Tests
         [Test]
         public void RefuseAttackIllegalObject()
         {
-            var character = new Wizard();
+            var character = new Wizard() {WieldedWeapon = new IronDagger()};
             var item = new IronDagger();
+            
             var result = _god.Says(character).Can.Attack(item);
+            Assert.That(result,Is.False);
 
         }
-
+        [Test]
         public void AcceptAttackLegalObject()
         {
-            var character = new Wizard();
+            var character = new Wizard() {WieldedWeapon = new IronDagger()};
             var character2 = new Wizard();
             var item = new IronDagger();
             var result = _god.Says(character).Can.Attack(character2);
+            Assert.That(result,Is.True);
         }
     }
 }

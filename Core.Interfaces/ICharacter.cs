@@ -7,5 +7,7 @@ namespace Core.Interfaces
     {
         Class Class { get; }
         Int32 Level { get; }
+        double Experience { get; }
+        IWeapon WieldedWeapon { get; }
     }
 }
