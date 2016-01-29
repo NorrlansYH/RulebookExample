@@ -38,6 +38,20 @@ namespace Tests
 
             Assert.That(result, Is.True);
         }
+        [Test]
+        public void CantEquipHighLevelArmors()
+        {
+            var character = new Wizard();
+            var item = new ClothArmor
+            {
+                MinLevel = 15
+            };
+
+            var result =
+                _god.Says(character).Can.Equip(item);
+
+            Assert.That(result, Is.False);
+        }
 
         [Test]
         public void ChecksWieldingByLevel()
