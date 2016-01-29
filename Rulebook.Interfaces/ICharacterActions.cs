@@ -6,5 +6,6 @@ namespace Rulebook.Interfaces
     {
         Boolean Wield(Object item);
         object Attack(Object obj);
+        Boolean Equip(Object item);
     }
 }
