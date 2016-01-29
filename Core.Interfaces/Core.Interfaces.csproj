@@ -43,7 +43,9 @@
     <Compile Include="Classifications\CharacterClass.cs" />
     <Compile Include="Classifications\Itemtype.cs" />
     <Compile Include="Classifications\MaterialTypes.cs" />
+    <Compile Include="IArmor.cs" />
     <Compile Include="ICharacter.cs" />
+    <Compile Include="IEquipable.cs" />
     <Compile Include="IWeapon.cs" />
     <Compile Include="IWieldable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
