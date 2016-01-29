@@ -64,5 +64,13 @@ namespace Tests
 
             Assert.That(result, Is.False);
         }
+        [Test]
+        public void GoodWithWeapon()
+        {
+            var carracter = new Warrior();
+            var item = new Sword();
+
+            var result = _god.Says(carracter).Good.WithWeapon(item);
+        }
     }
 }

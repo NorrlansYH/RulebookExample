@@ -2,6 +2,7 @@
 {
     public enum Class
     {
-        Wizard
+        Wizard,
+        Warrior
     }
 }
