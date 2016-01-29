@@ -1,5 +1,6 @@
 ﻿using System;
 using Core;
+using Core.Armor;
 using Core.Weapons;
 using NUnit.Framework;
 using Rulebook;
@@ -24,6 +25,16 @@ namespace Tests
                 _god.Says(character).Can.Wield(item);
 
             Assert.That(result, Is.True);
+        }
+
+        [Test]
+        public void AcceptsEquipingArmor()
+        {
+            var character = new Wizard();
+            var item = new ClothArmor();
+
+            var result =
+                _god.Says(character).Can.Equip(item);
         }
 
         [Test]

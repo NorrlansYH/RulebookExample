@@ -4,6 +4,15 @@
     {
         Staff,
         Dagger,
-        Sword
+        Sword,
+        
+    }
+
+    public enum Armortype
+    {
+        Cloth,
+        Leather,
+        Mail,
+        Plate
     }
 }
