@@ -5,6 +5,10 @@
         Staff,
         Dagger,
         Sword,
+        Mace,
+        Spear,
+        GreatSword
+
         
     }
 
