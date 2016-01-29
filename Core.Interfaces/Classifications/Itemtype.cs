@@ -4,6 +4,10 @@
     {
         Staff,
         Dagger,
-        Sword
+        Sword,
+        Forks,
+        Sticks,
+        Boots,
+        Rock
     }
 }
