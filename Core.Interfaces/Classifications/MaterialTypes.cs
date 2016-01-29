@@ -8,6 +8,7 @@
         Stone,
         Plastic,
         Wool,
-        Glass
+        Glass,
+        Paper
     }
 }
